@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api',
-    'rest_framework'
+    'rest_framework',
+    'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,17 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'TODO_api.wsgi.application'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',  # токени
+        'rest_framework.authentication.SessionAuthentication',  # браузерна авторизація
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',  # доступ лише авторизованим
+    ],
+}
 
 
 # Database
