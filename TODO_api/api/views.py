@@ -9,3 +9,10 @@ class TodoItemListCreate(generics.ListCreateAPIView):
     queryset = TodoItem.objects.all()
     serializer_class = TodoItemSerializer
 
+
+
+class TodoItemRetrieveUptadeDestroy(generics.RetrieveUpdateDestroyAPIView):
+    queryset = TodoItem.objects.all()
+    serializer_class = TodoItemSerializer
+    lookup_field = 'pk'
+
