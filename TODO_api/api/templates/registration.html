@@ -2,10 +2,20 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Реєстрація</title>
+    <title>Registration</title>
+    <style>
+        .input-field {
+            padding: 8px;
+            margin: 5px 0;
+            width: 100%;
+            border: 2px solid #ccc;
+            background-color: bisque;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Реєстрація користувача</h1>
+    <h1>Register your account to get API key</h1>
 
     <form method="POST">
         {% csrf_token %}

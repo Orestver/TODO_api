@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Ваш API ключ:</h1>
-    <p>{{ api_key }}</p>
-    <p>Скопіюйте і збережіть його!</p>
-</body>
-</html>
+<h2>{{ message }}</h2>
+
+{% if api_key %}
+  <p>Your API key (copy that code and store it , it never shows again):</p>
+  <code>{{ api_key }}</code>
+{% else %}
+  <p>Key not found.</p>
+{% endif %}
